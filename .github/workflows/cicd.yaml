@@ -1,4 +1,4 @@
-name: CI/CD STRAPI  
+name: CI/CD STRAPI 
 
 on:
   push:
