@@ -33,5 +33,7 @@ jobs:
           git pull origin main && \
           yarn install
           yarn build
-          pm2 start npm --name "Strapi" -- run start
+          pm2 stop strapi || true
+          npm install
+          pm2 restart all
           EOF
