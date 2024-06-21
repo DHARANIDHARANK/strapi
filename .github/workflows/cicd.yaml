@@ -33,8 +33,6 @@ jobs:
           git pull origin main && \
           yarn install
           yarn build
-          sudo apt update && sudo apt install -y nodejs npm && sudo npm install -g pm2
-          pm2 stop strapi || true
-          npm install
-          pm2 restart all
+          pm2 start npm --name strapi -- run start
+
           EOF
